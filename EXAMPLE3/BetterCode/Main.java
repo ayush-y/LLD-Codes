@@ -1,4 +1,4 @@
-package SOLID.EXAMPLE3.BetterCode;
+package StrategyPattern;
 
 
 public class Main {
