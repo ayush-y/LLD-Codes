@@ -1,5 +1,7 @@
 package StrategyPattern;
 
+import java.beans.Statement;
+
 public class DinnersCreditCard extends CreditCrad {
 
     private String cardNumber;
@@ -7,6 +9,7 @@ public class DinnersCreditCard extends CreditCrad {
     private String expiryDate;
     private int cvv;
     private RefundStrategy refundStrategy;
+    private Statement statement;
 
     public DinnersCreditCard() {
         this.refundStrategy = new WalletRefundStrategy();
@@ -27,6 +30,9 @@ public class DinnersCreditCard extends CreditCrad {
 
     public void payByDinners() {
         this.refundStrategy.doRefund();
+    }
+    public void setStatement(Statement statement) {
+        this.statement = statement;
     }
     
 }
